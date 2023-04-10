@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>文本展示HTML</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		#menu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.9);
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			z-index: 1;
+		}
+
+		#menu ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+		}
+
+		#menu li {
+			margin: 0 10px;
+		}
+
+		#menu li a {
+			color: #333;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		#menu li a:hover {
+			background-color: #eee;
+		}
+
+		#content {
+			margin-top: 50px;
+			padding: 20px;
+		}
+
+		h1 {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0 0 10px 0;
+		}
+
+		h2 {
+			font-size: 20px;
+			font-weight: bold;
+			margin: 30px 0 10px 0;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0 0 20px 0;
+		}
+
+		#toc {
+			position: fixed;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 10px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			z-index: 1;
+		}
+
+		#toc ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#toc li {
+			margin: 0 0 5px 0;
+		}
+
+		#toc li a {
+			color: #333;
+			text-decoration: none;
+			font-size: 14px;
+			transition: color 0.3s ease;
+		}
+
+		#toc li a:hover {
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="https://flycamera.gitee.io/kejiwenhua/main.html">回到首页</a></li>
+			<li><a href="#content">回到顶部</a></li>
+			<li><a href="word-2.html">刷新</a></li>
+		</ul>
+		
+	</div >
+	<div id="content">
+
+		<h2 id="section1" style="text-align: center;">1</h2>
+		<p>请你下载这个 <a href="https://www.123pan.com/s/Rz6UVv-WjKW3.html">点我</a> 并安装 ，打开</p>
+		<h2 id="section2" style="text-align: center;">2</h2>
+		<p>桌面上新建一个xxx.cpp 并用刚才的软件打开</p>
+		<h2 id="section3" style="text-align: center;">3</h2>
+		<p>现在写代码！！！</p>
+		<h2 id="section4" style="text-align: center;">总结</h2>
+		<p>写完后将上面的按钮依次点一遍，注意是右上角方的按钮，最后看低下有没有报错，没有就会出现黑框，出现开头的场景。你成功了！！！</p>
+	</div>
+
+</body>
+</html>

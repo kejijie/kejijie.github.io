@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>小游戏结局</title>
+	<style>
+		body {
+			background-image: url("background.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			color: #000;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			animation: fadeOut 2s ease-in-out forwards;
+			z-index: 1;
+		}
+
+		@keyframes fadeOut {
+			0% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+
+		h1 {
+			font-size: 6rem;
+			margin-bottom: 2rem;
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		p {
+			font-size: 2rem;
+			margin: 1rem 0;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			animation: fadeIn 2s ease-in-out forwards;
+		}
+
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.cursor {
+			display: inline-block;
+			position: relative;
+			top: -0.5rem;
+			animation: blink 1s ease-in-out infinite;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<h1>结&nbsp;局</h1>
+	<p>
+		<span class="cursor">_</span> 恭&nbsp;喜&nbsp;你&nbsp;通&nbsp;关&nbsp;了&nbsp;游&nbsp;戏&nbsp;！ &nbsp;<span class="cursor">_</span>
+	</p>
+	<p>
+		<span class="cursor">_</span> 现在请你点 <button onclick="window.location.href='te.html'">我</button>，完成最终的胜利！！！<span class="cursor">_</span>
+	</p>
+	<p>
+		<span class="cursor">_</span> 你&nbsp;是&nbsp;本&nbsp;游&nbsp;戏&nbsp;的&nbsp;真&nbsp;正&nbsp;玩&nbsp;家&nbsp;！ &nbsp;<span class="cursor">_</span>
+	</p>
+	<p>
+		<span class="cursor">_</span> 感&nbsp;谢&nbsp;你&nbsp;的&nbsp;耐&nbsp;心&nbsp;和&nbsp;支&nbsp;持&nbsp;！ &nbsp;<span class="cursor">_</span>
+	</p>
+	
+</body>
+</html>

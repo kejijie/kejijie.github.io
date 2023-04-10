@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>文本展示HTML</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		#menu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.9);
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			z-index: 1;
+		}
+
+		#menu ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+		}
+
+		#menu li {
+			margin: 0 10px;
+		}
+
+		#menu li a {
+			color: #333;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		#menu li a:hover {
+			background-color: #eee;
+		}
+
+		#content {
+			margin-top: 50px;
+			padding: 20px;
+		}
+
+		h1 {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0 0 10px 0;
+		}
+
+		h2 {
+			font-size: 20px;
+			font-weight: bold;
+			margin: 30px 0 10px 0;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0 0 20px 0;
+		}
+
+		#toc {
+			position: fixed;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 10px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			z-index: 1;
+		}
+
+		#toc ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#toc li {
+			margin: 0 0 5px 0;
+		}
+
+		#toc li a {
+			color: #333;
+			text-decoration: none;
+			font-size: 14px;
+			transition: color 0.3s ease;
+		}
+
+		#toc li a:hover {
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="https://flycamera.gitee.io/kejiwenhua/main.html">回到首页</a></li>
+			<li><a href="#content">回到顶部</a></li>
+			<li><a href="word-1.html">刷新</a></li>
+		</ul>
+		
+	</div >
+	<div id="content">
+		<h1 style="text-align: center;" >标题</h1>
+		<p>前言:
+		<p>随着互联网的普及，越来越多的中小学生开始使用网络。虽然网络为学生提供了更广阔的知识和交流平台，但是也带来了一些问题。例如，网络安全和信息真实性等方面的挑战。因此，提高中小学生的网络素养显得尤为重要。</p>
+		<h2 id="section1" style="text-align: center;">网络安全的基本知识</h2>
+		<p>中小学生应该了解网络安全的基本知识。他们需要知道如何设置密码、如何避免病毒和恶意软件的攻击，以及如何识别网络钓鱼等诈骗行为。此外，他们也需要了解如何保护自己的个人信息，如不随意透露姓名、地址和电话等隐私信息。</p>
+		<h2 id="section2" style="text-align: center;">掌握正确的网络使用方法</h2>
+		<p>其次，中小学生需要掌握正确的网络使用方法。他们应该学会如何使用搜索引擎、如何浏览网页，并且应该知道如何识别不良信息和内容。同时，他们也应该遵守网络道德规范，不发布不当言论，不侵犯他人的隐私和版权等。</p>
+		<h2 id="section3" style="text-align: center;">关注信息真实性和可信度</h2>
+		<p>中小学生还应该关注信息真实性和可信度。他们需要学会辨别虚假信息和谣言，并且应该学会寻找可靠的信息来源。在网络上获取信息时，他们应该采用多种途径，如查阅多个网站、与专业人士交流等，以确保获取的信息准确可靠。</p>
+		<h2 id="section4" style="text-align: center;">总结</h2>
+		<p>总之，提高中小学生的网络素养是一项长期而艰巨的任务。教育部门和家长应该共同努力，为中小学生提供更加全面和系统的网络素养教育，以帮助他们更好地利用网络资源，同时也避免网络带来的风险。</p>
+	</div>
+	<div id="toc">
+	<h2 style="text-align: center;">目录</h2>
+		<ul>
+
+			<li><a href="#section1">1.网络安全的基本知识</a></li>
+			<li><a href="#section2">2.掌握正确的网络使用方法</a></li>
+			<li><a href="#section3">3.关注信息真实性和可信度</a></li>
+				<li><a href="#section4">4.结尾</a></li>
+		</ul>
+	</div>
+</body>
+</html>

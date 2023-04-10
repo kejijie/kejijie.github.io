@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>视频播放</title>
+	<style>
+		#likes, #comments {
+			display: inline-block;
+			margin-right: 20px;
+			font-size: 18px;
+		}
+		#likes button, #comments button {
+			background-color: #3498db;
+			color: #fff;
+			border: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		#likes span, #comments span {
+			margin-left: 5px;
+		}
+		.comment {
+			margin: 10px 0;
+			padding: 10px;
+			background-color: #f5f5f5;
+			border-radius: 5px;
+		}
+		.comment strong {
+			font-size: 16px;
+			color: #3498db;
+		}
+		.comment p {
+			margin-top: 5px;
+			font-size: 14px;
+			color: #333;
+		}
+		.error {
+			color: red;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>对网络暴力说no</h1>
+		<p>素材来源于网络，侵权联系删除。</p>
+		<video width="640" height="360" controls>
+			<source src="video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div id="likes">
+			<button onclick="like()">点赞</button>
+			<span id="like-count">0</span>
+		</div>
+		<div id="comments">
+			<button onclick="showCommentForm()">评论</button>
+			<span id="comment-count">50</span>
+		</div>
+		<div id="comment-form" style="display: none;">
+			<h2>发表评论</h2>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+				<label for="name">昵称：</label>
+				<input type="text" id="name" name="name"><br>
+				<label for="comment">评论：</label>
+				<textarea id="comment" name="comment"></textarea><br>
+				<span class="error" id="name-error"></span><br>
+				<span class="error" id="comment-error"></span><br>
+				<input type="submit" value="提交">
+			</form>
+		</div>
+		<div id="comment-list">
+			<h2>评论区</h2>
+
+		</div>
+	</div>
+	<script>
+		var likeCount = 0;
+		function like() {
+			likeCount++;
+			document.getElementById("like-count").innerHTML = likeCount;
+		}
+		function showCommentForm() {
+			document.getElementById("comment-form").style.display = "block";
+		}
+	</script>
+	<script>
+		// 在提交评论前进行安全性检查
+		document.querySelector("form").addEventListener("submit", function(event) {
+			var name = document.getElementById("name").value;
+			var comment = document.getElementById("comment").value;
+			var nameError = document.getElementById("name-error");
+			var commentError = document.getElementById("comment-error");
+			nameError.innerHTML = "";
+			commentError.innerHTML = "";
+			if (name.trim() == "") {
+				nameError.innerHTML = "昵称不能为空";
+				event.preventDefault();
+			} else if (name.length > 20) {
+				nameError.innerHTML = "昵称长度不能超过20个字符";
+				event.preventDefault();
+			}
+			if (comment.trim() == "") {
+				commentError.innerHTML = "评论不能为空";
+				event.preventDefault();
+			} else if (comment.length > 200) {
+				commentError.innerHTML = "评论长度不能超过200个字符";
+				event.preventDefault();
+			}
+		});
+	</script>
+</body>
+</html>
